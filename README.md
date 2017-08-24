@@ -1,10 +1,12 @@
 # game2048
 a simple game 
-### 展示图
+
+## 展示图
 <img width="450" height="500" src="https://github.com/xijiezhong/player/blob/master/img/2048.png"/>
-## 项目内容
+
+### 项目内容
 如上图所示，该项目就是一个网页版2048小游戏，有兴趣的同学可以clone下来npm run start之后运行public目录下的index.html就可以试玩了
-## 项目目标
+### 项目目标
 接下来我准备对这个小游戏进行功能上的拓展，把这个小游戏放到微信上，加入分享功能之类的
 有几方面的事情需要做：
 1.移动端的适配
