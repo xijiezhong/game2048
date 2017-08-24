@@ -40,7 +40,7 @@ exports.getNumColor = function(number){
 	return 'white';
 }
 //判断能否向左滑
-exports.canMoveLeft = function(cellArray){
+function canMoveLeft(cellArray){
 	for(var i = 0;i < 4;i++)
 		for(var j = 1;j < 4;j++){
 			if(cellArray[i][j] != 0)
@@ -49,8 +49,9 @@ exports.canMoveLeft = function(cellArray){
 		}
 	return false;
 }
+exports.canMoveLeft = canMoveLeft;
 //判断能否向下滑
-exports.canMoveDown = function(cellArray){
+function canMoveDown(cellArray){
 	for(var i = 0;i < 3;i++)
 		for(var j = 0;j < 4;j++){
 			if(cellArray[i][j] != 0)
@@ -60,8 +61,10 @@ exports.canMoveDown = function(cellArray){
 
 	return false;
 }
+exports.canMoveDown = canMoveDown;
+
 //判断能否向上滑 
-exports.canMoveUp = function(cellArray){
+function canMoveUp(cellArray){
 	for(var i = 1;i < 4;i++)
 		for(var j = 0;j < 4;j++){
 			if(cellArray[i][j] != 0)
@@ -70,8 +73,9 @@ exports.canMoveUp = function(cellArray){
 		}
 	return false;
 }
+exports.canMoveUp = canMoveUp;
 //判断能否向右滑
-exports.canMoveRight = function(cellArray){
+function canMoveRight(cellArray){
 	for(var i = 0;i < 4;i++)
 		for(var j = 0;j < 3;j++){
 			if(cellArray[i][j] != 0)
@@ -80,6 +84,7 @@ exports.canMoveRight = function(cellArray){
 		}
 	return false;
 }
+exports.canMoveRight = canMoveRight;
 //判断水平方向两个格子间是否有数字阻塞
 exports.noXBlock = function(row,col1,col2,cellArray){
 	for(var j = col1 + 1;j < col2;j++)

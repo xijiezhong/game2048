@@ -2,7 +2,7 @@ var webpack = require("webpack");
 var path = require("path");
 
 module.exports = {
-  devtool: 'eval-source-map',
+  devtool: '#cheap-module-eval-source-map',
   entry:  __dirname + "/app/index.js",
   output: {
     path: __dirname + "/public",
@@ -10,17 +10,21 @@ module.exports = {
   },
   module: {
   	loaders: [
-      {
-      	test:/\.css$/,
-      	loader:'style-loader!css-loader'
-      }
+        {
+      	    test:/\.css$/,
+      	    loader:'style-loader!css-loader'
+        },
+        {
+            test:/.js$/,
+            loader:'babel-loader',
+            query: {presets: ['es2015']}
+        }
   	]
   },
   plugins:[
      new webpack.ProvidePlugin({
        $:"jquery",
        jquery:"jquery",
-       "window.jquery":"jquery"
-     })
+     }),
   ]
 }
