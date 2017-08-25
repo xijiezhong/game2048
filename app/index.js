@@ -18,45 +18,29 @@ $(document).ready(function () {
     		case 37:  //向左移动
     		     event.preventDefault();
     		     if(moveLeft()){
-    		     	setTimeout(function(){
-    		     		randomOneNumber();
-					},210);
-    		     	setTimeout(function(){
-    		     		isGameover();
-					},300);
+    		     	setTimeout(randomOneNumber,210);
+    		     	setTimeout(isGameover,300);
     		     }
     		     break;
     		case 38:  //向上移动
     		     event.preventDefault();
     		     if(moveUp()){
-    		     	setTimeout(function(){
-                     randomOneNumber();
-                 },210);
-    		     	setTimeout(function(){
-                     isGameover();
-                 },300);
+    		     	setTimeout(randomOneNumber,210);
+    		     	setTimeout(isGameover,300);
     		     }
     		     break;
     		case 39:  //向右移动
     		     event.preventDefault();
     		     if(moveRight()){
-    		     	setTimeout(function(){
-                        randomOneNumber();
-                    },210);
-    		     	setTimeout(function(){
-                        isGameover();
-                    },300);
+    		     	setTimeout(randomOneNumber,210);
+    		     	setTimeout(isGameover,300);
     		     }
     		     break;
     		case 40:  //向下移动
     		     event.preventDefault();
     		     if(moveDown()){
-    		     	setTimeout(function(){
-                        randomOneNumber();
-                    },210);
-    		     	setTimeout(function(){
-                        isGameover();
-                    },300);
+    		     	setTimeout(randomOneNumber,210);
+    		     	setTimeout(isGameover,300);
     		     }
     		     break;
     		default:
@@ -102,9 +86,7 @@ function moveRight(){
             }
         }
     //使用动画更新表格
-    setTimeout(function(){
-    	updateCellView();
-	},200);
+    setTimeout(updateCellView,200);
     return true;
 }
 //向左滑
@@ -133,9 +115,7 @@ function moveLeft(){
             }
         }
     //使用动画更新表格
-    setTimeout(function(){
-        updateCellView();
-    },200);
+    setTimeout(updateCellView,200);
     return true;
 }
 //向上滑
@@ -164,9 +144,7 @@ function moveUp(){
             }
         }
     //使用动画更新表格
-    setTimeout(function(){
-        updateCellView();
-    },200);
+    setTimeout(updateCellView,200);
     return true;
 }
 //向下滑
@@ -195,9 +173,7 @@ function moveDown(){
             }
         }
     //使用动画更新表格
-    setTimeout(function(){
-        updateCellView();
-    },200);
+    setTimeout(updateCellView,200);
     return true;
 }
 
